@@ -33,7 +33,7 @@
 
 2. Setup environment variables:
   
-   `cp .env.example .env`
+   `cp example.env .env`
       
       Fill in the values:
      
@@ -74,7 +74,7 @@
 
 ## Database Set Up (Supabase)
 - Run this SQL commands in Supabase to set up the database schema and storage:
-  - Create quiz table
+  - Create `quiz` table
   - Add Row Level Security (RLS) to quiz table and photo storage
 
 ```sql
@@ -89,7 +89,7 @@ create table quiz (
 alter table quiz enable row level security;
 alter table storage.objects enable row level security;
 ```
-- Create new bucket for photo storage `album` (any bucket name)
+- Create new bucket for photo storage `photos` 
   - Storage > New bucket
 - Register test account
   - Authentication > Add User > Create new user
@@ -98,6 +98,6 @@ alter table storage.objects enable row level security;
     - Enable insert for authenticated users only with authenticated role
     - Enable read access for all users with authenticated role
   - Update storage policies
-    - Storage > Policies > album (bucket name)
+    - Storage > Policies > photos
 
 
