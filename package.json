@@ -1,5 +1,5 @@
 {
-  "name": "ai-quiz-app",
+  "name": "ai-photo-quiz",
   "private": true,
   "scripts": {
     "dev": "next dev",
